@@ -59,7 +59,6 @@ module.exports = {
 		module.exports.request(opt)
 			.then((r) => {
 				if(r.error) return console.error("[sdc-api | Авто-пост] Ошибка в работе\n" + r.error.message);
-				else return console.info("[sdc-api | Авто-пост] Статистика для " + client.user.tag + " опубликована на мониторинг.\n" + encodeURI(botsPath + "/" + client.user.id));
 			}, (e) => console.error("[sdc-api | Авто-пост] Ошибка в работе | ", e));
 	}
 };
